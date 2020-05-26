@@ -1,16 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const ejs = require("ejs");
 const app = express();
 
-app.use(express.static(__dirname + "public"));
-app.use(express.static('views'))
+app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.get("/index.html", function(req, res) {
-  res.sendFile(__dirname + "/views/index.html");
+app.get("/", function(req, res) {
+  res.render("index.ejs");
 });
 
 app.listen(3000, function(){
