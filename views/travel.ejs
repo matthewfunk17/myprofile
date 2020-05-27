@@ -1,0 +1,19 @@
+<%- include("partials/header"); %>
+
+<body>
+  <div class="photos">
+    <% for (var i = 0; i < imgFiles.length; i += 3) { %>
+      <div class="timeline-time">
+          <img src="<%= imgFiles[i] %>" alt="travel photo">
+          <% if (imgFiles.length - i >= 2) { %>
+            <img src="<%= imgFiles[i+1] %>" alt="travel photo">
+          <% } %>
+          <% if (imgFiles.length - i >= 3) { %>
+            <img src="<%= imgFiles[i+2] %>" alt="travel photo">
+          <% } %>
+      </div>
+    <% } %>
+  </div>
+</body>
+
+<%- include("partials/footer"); %>
