@@ -53,18 +53,6 @@ p {
   padding-bottom: 30px;
 }
 
-.top-cloud {
-  position: absolute;
-  right: 300px;
-  top: 50px;
-}
-
-.bottom-cloud {
-  position: absolute;
-  left: 300px;
-  bottom: 300px;
-}
-
 .pro {
   text-decoration: underline;
 }
@@ -95,24 +83,17 @@ p {
   font-weight: normal;
 }
 
-.food-catching {
-  width: 25%;
+.image {
+  width: 20%;
   height: 150px;
   float: left;
   margin-right: 30px;
 }
 
-.handstands {
-  width: 25%;
-  height: 150px;
-  float: right;
-  margin-left: 30px;
-}
-
-.skill-row {
+.project {
   position: relative;
   margin: 100px auto;
-  width: 50%;
+  width: 75%;
   text-align: left;
 }
 
@@ -172,9 +153,35 @@ p {
   position:relative;
   z-index:0;
 }
+
 .overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.photos .box {
+  display:table;
+}
+
+.photos .box .box-row {
+  display:table-row;
+}
+
+.photos .box .box-cell {
+  display:table-cell;
+  width:51.5%;
+}
+
+.photos .box .box-cell.left-imgs .top-left-img {
+  position: relative;
+}
+
+.photos .box .box-cell.left-imgs .bottom-left-img {
+  position: relative;
+}
+
+.photos .box .box-cell.right-img .right-img-photo {
+  margin: 0 auto;
 }

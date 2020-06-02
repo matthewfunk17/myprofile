@@ -3,14 +3,24 @@
 <body>
   <div class="photos">
     <% for (var i = 0; i < imgFiles.length; i += 3) { %>
-      <div class="timeline-time">
-          <img src="<%= imgFiles[i] %>" alt="travel photo">
-          <% if (imgFiles.length - i >= 2) { %>
-            <img src="<%= imgFiles[i+1] %>" alt="travel photo">
-          <% } %>
-          <% if (imgFiles.length - i >= 3) { %>
-            <img src="<%= imgFiles[i+2] %>" alt="travel photo">
-          <% } %>
+      <h2>Location</h2>
+      <div class="box">
+        <div class="box-row">
+
+          <div class="box-cell left-imgs">
+            <img class = "top-left-img" src="<%= imgFiles[i] %>" alt="travel photo">
+            <% if (imgFiles.length - i >= 2) { %>
+              <img class = "bottom-left-img" src="<%= imgFiles[i+1] %>" alt="travel photo">
+            <% } %>
+          </div>
+
+          <div class="box-cell right-img">
+            <% if (imgFiles.length - i >= 3) { %>
+              <img class = "right-img-photo" src="<%= imgFiles[i+2] %>" alt="travel photo">
+            <% } %>
+          </div>
+
+        </div>
       </div>
     <% } %>
   </div>

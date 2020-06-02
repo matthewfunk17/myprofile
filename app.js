@@ -25,6 +25,10 @@ app.get("/travel", function(req, res) {
   })
 });
 
+app.get("/projects", function(req, res) {
+  res.render("projects.ejs");
+});
+
 app.listen(3000, function(){
   console.log("Server is running on port 3000.");
 });
